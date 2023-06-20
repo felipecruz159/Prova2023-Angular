@@ -1,0 +1,11 @@
+{
+  "Empresa": [
+    {
+      "id": 1,
+      "nome": "Ads",
+      "internacional": false,
+      "cnpj": "123123123",
+      "contato": "123123123"
+    }
+  ]
+}
