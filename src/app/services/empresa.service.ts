@@ -8,7 +8,7 @@ import { Empresa } from '../components/empresa/Empresa';
 })
 export class EmpresaService {
 
-  url: string = 'http://localhost:3000/Empresa';
+  url: string = 'http://localhost:8080/empresas';
 
   constructor(private http: HttpClient) { }
 
@@ -23,5 +23,5 @@ export class EmpresaService {
   removeEmpresa(empresa: Empresa): Observable<void>{
     return this.http.delete<void>(`${this.url}/${empresa.id}`);
   }
-  
+
 }
