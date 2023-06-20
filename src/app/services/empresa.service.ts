@@ -19,4 +19,9 @@ export class EmpresaService {
   saveEmpresa(empresa: Empresa): Observable<Empresa>{
     return this.http.post<Empresa>(this.url, empresa);
   }
+
+  removeEmpresa(empresa: Empresa): Observable<void>{
+    return this.http.delete<void>(`${this.url}/${empresa.id}`);
+  }
+  
 }

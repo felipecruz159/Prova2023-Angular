@@ -42,4 +42,11 @@ export class EmpresaComponent implements OnInit {
     })
   }
 
+  removeEmpresa(empresa: Empresa){
+    this.empresaService.removeEmpresa(empresa).subscribe({
+      next: () => {
+        this.empresa.splice(this.empresa.indexOf(empresa), 1);
+      }
+    })
+  }
 }
